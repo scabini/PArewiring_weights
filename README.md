@@ -6,9 +6,9 @@ How to use:
 
 ```python
 from torch import nn
-import weight_optimizer
+from weight_improvement import NS_weights
 for m in model.modules():
     if isinstance(m, nn.Conv2d) or isinstance(m, nn.Linear):
-        weight_optimizer.NS_weights(m.weight)
+        NS_weights(m.weight)
 ```
 
