@@ -1,6 +1,10 @@
-# network_science_weights
- 
-How to use:
+# Random Weight Organization Matters: Improving Deep Neural Network Initialization Through Network Science
+
+![](https://github.com/scabini/network_science_weights/rewiring_video.gif)
+
+
+
+## Usage
 
 - Given a pytorch model:
 
