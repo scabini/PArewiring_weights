@@ -1,6 +1,6 @@
 # Random Weight Organization Matters: Improving Deep Neural Network Initialization Through Network Science
 
-![](https://github.com/scabini/network_science_weights/rewiring_video.gif)
+![](https://github.com/scabini/network_science_weights/blob/main/rewiring_video.gif)
 
 
 
