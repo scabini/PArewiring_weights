@@ -1,5 +1,7 @@
 # Random Weight Organization Matters: Improving Deep Neural Network Initialization Through Network Science
 
+## One of the things you need is a good neuronal organization!
+
 ![](https://github.com/scabini/network_science_weights/blob/main/rewiring_video.gif)
 
 
