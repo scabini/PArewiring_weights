@@ -1,4 +1,4 @@
-# Random Weight Organization Matters: Improving Deep Neural Network Initialization Through Network Science
+# Weight Organization Matters: Improving Deep Neural Network Random Initialization Through Neuronal Rewiring
 
 ## One of the things you need is a good neuronal organization!
 
@@ -12,10 +12,10 @@
 
 ```python
 from torch import nn
-from weight_improvement import NS_weights
+from weight_rewiring import PA_rewiring_np
 for m in model.modules():
     #also works with any tensor with more than 1 dimension, just specify it here
     if isinstance(m, nn.Conv2d) or isinstance(m, nn.Linear):
-        NS_weights(m.weight)
+        PA_rewiring_np(m.weight)
 ```
 
