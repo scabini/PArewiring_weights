@@ -78,7 +78,7 @@ def PA_rewiring_torch(weights, seed=False):
 
 
 ### HOW TO USE:
-# eg. initializing all layers of a conv2d model:
+# eg. rewiring all layers of a conv2d model:
 
 # for m in model.modules():
 #     if isinstance(m, torch.nn.Conv2d) or isinstance(m, torch.nn.Linear):
