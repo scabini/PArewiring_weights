@@ -14,14 +14,9 @@ model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet18', pretrained=False, v
 
 for m in model.modules():
     #define the types of layers to rewire (models usually contains only Conv and Linear layers)
-    if isinstance(m, torch.nn.Conv2d) or isinstance(m, torch.nn.Linear): 
-        
+    if isinstance(m, torch.nn.Conv2d) or isinstance(m, torch.nn.Linear):  
+        #first, fill weights with an initializer (we recomend Orthogonal weights)
+        torch.nn.init.orthogonal_(m.weight) 
         # weight_rewiring.PA_rewiring_torch(m.weight) #torch version has lower precision on the strength calculation
-        
-        print('max(|si|) before rewiring:', torch.max(torch.abs(torch.sum(m.weight, dim=0))))
-        
         weight_rewiring.PA_rewiring_np(m.weight) #np version was used in the paper
         
-        print('           after rewiring:', torch.max(torch.abs(torch.sum(m.weight, dim=0))))
-        print('')
-
