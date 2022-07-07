@@ -1,10 +1,14 @@
 # Weight Organization Matters: Improving Deep Neural Network Random Initialization Through Neuronal Rewiring
 
-## One of the things you need is a good neuronal organization! We propose the Preferential Attachment (PA) Rewiring technique for minimizing the strength of randomly initialized neurons.
+## One of the things you need is a good neuronal organization!
 
 ![](https://github.com/scabini/network_science_weights/blob/main/rewiring_video.gif)
 
+We propose the Preferential Attachment (PA) Rewiring technique for minimizing the strength of randomly initialized neurons.
 
+## Requirements
+
+Only pytorch and/or numpy is needed (see _torch and _np versions of the method in "weight_rewiring.py")
 
 ## Usage
 
