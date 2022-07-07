@@ -76,6 +76,31 @@ def PA_rewiring_torch(weights, seed=False):
         weights = weights.reshape((dimensions))          
     return weights  #cast the obtained tensor into the input tensor 'weights'
 
+def stabilize_strength(initializer, weights, K=100): #how much stable? =) increase K!
+### random search to minimize strength variance
+#initializer is a lambda function that receives the weights, eg:
+# initializer = lambda w : torch.nn.init.kaiming_normal_(w, mode='fan_in', nonlinearity='relu')
+#or simply:
+# initializer = torch.nn.init.orthogonal_
+#weights is a torch weight matrix taken from a layer
+    maximus = np.Infinity 
+    dimensions = weights.shape   
+    output_neurons = weights.size(0)
+    input_neurons = weights.numel() // output_neurons  
+    weights_out = torch.empty(dimensions)
+    for i in range(K): 
+        initializer(weights)                              
+        weights = weights.reshape((output_neurons, input_neurons))
+        localmax = torch.mean(torch.hstack((torch.var(torch.sum(weights, dim=0) ), torch.var(torch.sum(weights, dim=1) ))))     
+        if localmax < maximus:
+            maximus = localmax
+            with torch.no_grad(): 
+                weights_out.view_as(weights).copy_(weights)   
+                
+    with torch.no_grad(): 
+        weights.view_as(weights_out.reshape(dimensions)).copy_(weights_out.reshape(dimensions))
+       
+    return weights
 
 ### HOW TO USE:
 # eg. rewiring all layers of a conv2d model:
