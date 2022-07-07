@@ -8,7 +8,7 @@ We propose the Preferential Attachment (PA) Rewiring technique for minimizing th
 
 ## Requirements
 
-Only pytorch and/or numpy is needed (see _torch and _np versions of the method in "weight_rewiring.py")
+Only pytorch and numpy is needed (see _torch and _np versions of the method in "weight_rewiring.py")
 
 ## Usage
 
