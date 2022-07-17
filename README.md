@@ -1,6 +1,6 @@
-# Weight Organization Matters: Improving Deep Neural Network Random Initialization Through Neuronal Rewiring
+# Improving Deep Neural Network Random Initialization Through Neuronal Rewiring
 
-## One of the things you need is a good neuronal organization!
+## Weight organization Matters! One of the things you need is a good neuronal organization.
 
 ![](https://github.com/scabini/network_science_weights/blob/main/rewiring_video.gif)
 
@@ -37,3 +37,18 @@ for m in model.modules():
         weight_rewiring.stabilize_strength(torch.nn.init.orthogonal_, m.weight)
         weight_rewiring.PA_rewiring_np(m.weight)
 ```
+
+## Reference
+
+If you use our code or methods, please cite the paper:
+
+Scabini, L., et al. "Improving Deep Neural Network Random Initialization Through Neuronal Rewiring", arxiv preprint (2022).
+
+```
+@article{scabini2022improving,
+  title={Improving Deep Neural Network Random Initialization Through Neuronal Rewiring},
+  author={Scabini, Leonardo and De Baets, Bernard and Bruno, Odemir M},
+  journal={arXiv preprint},
+  year={2022}
+}
+```   
