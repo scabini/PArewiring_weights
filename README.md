@@ -1,6 +1,8 @@
 # Improving Deep Neural Network Random Initialization Through Neuronal Rewiring
 
-## Weight organization Matters! One of the things you need is a good neuronal organization.
+https://arxiv.org/abs/2207.08148
+
+## Weight organization matters! One of the things you need is a good neuronal organization.
 
 ![](https://github.com/scabini/network_science_weights/blob/main/rewiring_video.gif)
 
