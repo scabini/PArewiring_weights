@@ -42,15 +42,15 @@ for m in model.modules():
 
 ## Reference
 
-If you use our code or methods, please cite the paper:
+If you use our code or methods, please cite:
 
-Scabini, L., et al. "Improving Deep Neural Network Random Initialization Through Neuronal Rewiring", arxiv preprint (2022).
+Scabini, Leonardo, Bernard De Baets, and Odemir M. Bruno. "Improving Deep Neural Network Random Initialization Through Neuronal Rewiring." arXiv preprint arXiv:2207.08148 (2022).
 
 ```
 @article{scabini2022improving,
   title={Improving Deep Neural Network Random Initialization Through Neuronal Rewiring},
   author={Scabini, Leonardo and De Baets, Bernard and Bruno, Odemir M},
-  journal={arXiv preprint},
+  journal={arXiv preprint arXiv:2207.08148},
   year={2022}
 }
 ```   
