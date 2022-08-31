@@ -6,7 +6,12 @@ https://arxiv.org/abs/2207.08148
 
 ![](https://github.com/scabini/network_science_weights/blob/main/rewiring_video.gif)
 
-We propose the Preferential Attachment (PA) Rewiring technique for minimizing the strength of randomly initialized neurons.
+We propose the Preferential Attachment (PA) Rewiring technique for minimizing the strength of randomly initialized neurons. The reorganized weights improves training and generalization while also reducing performance variance. See some results below for training 100 models, for each case, by varying only the seed used for random weight sampling (while all other seeds and stochastic processes, such as data augmentation, are fixed).
+
+<p align="center">
+    <img src="some_results.jpg">
+</p>
+
 
 ## Requirements
 
